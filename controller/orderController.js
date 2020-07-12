@@ -6,8 +6,6 @@ exports.createOrder = catchAsync(async (req,res,next)=>{
 
     req.query = `INSERT INTO orders_vendors (vendor_product_id,quantity) VALUES ?`
     var outputData = req.body.map(Object.values);
-    console.log(req.body)
-    console.log(outputData)
     
     await query.query_data(req,next,outputData).then(fields=>{
         console.log(fields)

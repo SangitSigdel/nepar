@@ -21,7 +21,7 @@ exports.uploadImage = multer({
 
 // exports.uploadImage = upload.array('images',3)
 
-exports.resizeImage =async(req, next,width,height,quality,file_path) => {
+exports.resizeImage =catchAsync(async(req, next,width,height,quality,file_path) => {
 
     req.body.images = [];
 
@@ -34,4 +34,4 @@ exports.resizeImage =async(req, next,width,height,quality,file_path) => {
     })
     );
 
-}
+})

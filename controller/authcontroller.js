@@ -8,7 +8,7 @@ exports.protect = async (req, res, next) => {
 
     const token = req.headers.authorization.split(' ')[1]
 
-    console.log(token)
+    // console.log(token)
 
     try {
 
@@ -22,7 +22,7 @@ exports.protect = async (req, res, next) => {
 
             req.user = results
 
-            console.log(req.user)
+            // console.log(req.user)
         })
 
         //temp for checking i am sending response to the user.

@@ -9,6 +9,7 @@ const homeRouter = require('./router/homeRouter')
 const likes_vendorRouter = require('./router/likes_vendorRouter')
 const nearMeRouter = require('./router/nearMeRouter')
 const orderRouter = require('./router/orderRouter')
+const compression  = require('compression')
 const globalErrorHandler = require('./controller/globalErrorHandler')
 const app = express()
 
@@ -23,6 +24,7 @@ app.use('/api/v1/json',homeRouter)
 app.use('/api/v1/json/vendor/products/likes',likes_vendorRouter)
 app.use('/api/v1/json/nearme',nearMeRouter)
 app.use('/api/v1/json/orders',orderRouter)
+app.use(compression())
 
 app.use('*',(req,res,next)=>{
 

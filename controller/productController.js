@@ -175,7 +175,7 @@ exports.create_customer_product = (req, res, next) => {
     query.query_data(req, next, post)
     .then(rows => {
         customer_query_result = rows
-        console.log(customer_query_result)
+        // console.log(customer_query_result)
 
         //it has been moved from the bottom after catch block don't know if it works should check once
         res.status(200).json({

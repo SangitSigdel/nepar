@@ -17,7 +17,7 @@ exports.vendorReview= (req,res,next)=>{
     query.query_data(req,next,post)
     .then(rows=>{
         vendor_review_query_result=rows
-        console.log(vendor_review_query_result)
+        // console.log(vendor_review_query_result)
         res.status(200).json({
             status:'success',
             message:'review added successfully'
