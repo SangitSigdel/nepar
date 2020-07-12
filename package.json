@@ -20,8 +20,13 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:prod":"NODE_ENV=production nodemon server.js"
   },
   "author": "sangit sigdel",
   "license": "ISC"
+},
+"engines":{
+  "node":">=10.0.0"
 }
