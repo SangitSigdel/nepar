@@ -12,7 +12,7 @@ const orderRouter = require('./router/orderRouter')
 const globalErrorHandler = require('./controller/globalErrorHandler')
 const app = express()
 
-//middlewares
+//middle wares 
 app.use(express.json())
 app.use(express.static('public'))
 app.use('/api/v1/json/user',userRouter)
