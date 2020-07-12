@@ -24,9 +24,10 @@
     "start": "node server.js",
     "start:prod":"NODE_ENV=production nodemon server.js"
   },
+  "engines": {
+    "node": ">=10.0.0"
+  },
   "author": "sangit sigdel",
   "license": "ISC"
-},
-"engines":{
-  "node":">=10.0.0"
+  
 }
