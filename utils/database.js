@@ -8,7 +8,6 @@ const user = process.env.SQL_USER
 const password = process.env.SQL_PASSWORD
 const database = process.env.SQL_DATABASE
 
-console.log(host,user,password,database)
 const con = mysql.createConnection({
     host: `${host}`,
     user: `${user}`,

@@ -3,7 +3,10 @@ const controller = require('../controller/orderController')
 
 const router = express.Router()
 
-router.route('/:vendor_product_id')
+router.route('/customer/:customer_id')
         .post(controller.createOrder)
+        .get(controller.getCustomerOrderInfo)
+router.route('/vendor/:vendor_id')
+        .get(controller.getVendorOrderInfo)
 
 module.exports = router
